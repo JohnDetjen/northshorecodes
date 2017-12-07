@@ -29,6 +29,8 @@ class MondayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarController?.tabBar.layer.zPosition = 0
+        
         //Edit Buttons Shape
         newProject.layer.cornerRadius = 5
         newProject.clipsToBounds = true

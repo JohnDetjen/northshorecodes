@@ -526,6 +526,7 @@
         <!--Thursday-->
         <scene sceneID="Bw1-mb-Ykl">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PvD-K9-4fA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="6Ca-cO-Wvs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WqG-w6-1oK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -535,7 +536,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Thursday" id="VUW-5v-fsU"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PvD-K9-4fA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1374" y="877"/>
         </scene>
@@ -558,33 +558,70 @@
         <!--Wednesday-->
         <scene sceneID="LHx-CW-e0J">
             <objects>
-                <viewController id="96W-Fu-e6Q" sceneMemberID="viewController">
+                <viewController id="96W-Fu-e6Q" customClass="WednesdayViewController" customModule="codes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ty9-5o-4d7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5v5-DJ-pNv">
+                                <rect key="frame" x="225" y="542" width="150" height="125"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBY-NZ-m2Z">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obV-cg-m9P">
+                                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="PKy-rr-RaB"/>
+                                    <constraint firstAttribute="width" secondItem="obV-cg-m9P" secondAttribute="height" multiplier="1:1" id="a6w-gz-pag"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="closeButton"/>
+                                <connections>
+                                    <action selector="closeCamera:" destination="96W-Fu-e6Q" eventType="touchUpInside" id="VjU-Tv-W7w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsf-BU-fhE">
+                                <rect key="frame" x="150" y="542" width="75" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wsf-BU-fhE" secondAttribute="height" multiplier="1:1" id="D4w-GZ-mrb"/>
+                                    <constraint firstAttribute="height" constant="75" id="yyz-AF-S81"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="didTakePhoto:" destination="96W-Fu-e6Q" eventType="touchUpInside" id="tnV-Yk-epB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="wsf-BU-fhE" firstAttribute="centerX" secondItem="Ty9-5o-4d7" secondAttribute="centerX" id="1br-t0-38s"/>
                             <constraint firstItem="fBY-NZ-m2Z" firstAttribute="leading" secondItem="Ty9-5o-4d7" secondAttribute="leading" id="4OH-ap-IQJ"/>
+                            <constraint firstAttribute="bottom" secondItem="5v5-DJ-pNv" secondAttribute="bottom" id="BxA-je-5fv"/>
+                            <constraint firstItem="obV-cg-m9P" firstAttribute="leading" secondItem="Ty9-5o-4d7" secondAttribute="leading" id="FYJ-hp-spR"/>
+                            <constraint firstAttribute="bottom" secondItem="fBY-NZ-m2Z" secondAttribute="bottom" id="LjW-1k-ZEj"/>
+                            <constraint firstAttribute="bottom" secondItem="wsf-BU-fhE" secondAttribute="bottom" constant="50" id="MoG-05-mcz"/>
+                            <constraint firstItem="5v5-DJ-pNv" firstAttribute="leading" secondItem="wsf-BU-fhE" secondAttribute="trailing" id="VGR-TG-0KU"/>
                             <constraint firstItem="fBY-NZ-m2Z" firstAttribute="top" secondItem="Ty9-5o-4d7" secondAttribute="top" id="bdv-p0-asS"/>
                             <constraint firstAttribute="trailing" secondItem="fBY-NZ-m2Z" secondAttribute="trailing" id="krA-yf-DsG"/>
-                            <constraint firstAttribute="bottom" secondItem="fBY-NZ-m2Z" secondAttribute="bottom" id="vM1-Dp-Zo9"/>
+                            <constraint firstItem="obV-cg-m9P" firstAttribute="top" secondItem="Ty9-5o-4d7" secondAttribute="top" id="nVm-nc-XbC"/>
+                            <constraint firstItem="wsf-BU-fhE" firstAttribute="top" secondItem="5v5-DJ-pNv" secondAttribute="top" id="o4I-O8-THC"/>
+                            <constraint firstAttribute="trailing" secondItem="5v5-DJ-pNv" secondAttribute="trailing" id="rZY-Uw-sQw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="POX-Kk-kB1"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Wednesday" image="Wednesday" id="hVs-oL-GJw"/>
                     <navigationItem key="navigationItem" title="Wednesday" id="p4k-H7-paN"/>
                     <connections>
-                        <outlet property="previewView" destination="fBY-NZ-m2Z" id="wxZ-OT-meK"/>
+                        <outlet property="captureImageView" destination="5v5-DJ-pNv" id="tzG-ol-fjW"/>
+                        <outlet property="previewView" destination="fBY-NZ-m2Z" id="wve-ez-GdZ"/>
+                        <outlet property="roundButton" destination="wsf-BU-fhE" id="oMm-sm-RVH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYd-cl-6bI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1373.5999999999999" y="131.78410794602701"/>
+            <point key="canvasLocation" x="655" y="133"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="261-ED-dn0">
@@ -599,7 +636,7 @@
                     <connections>
                         <segue destination="Vjy-X3-PGf" kind="relationship" relationship="viewControllers" id="iSl-I9-bbu"/>
                         <segue destination="eqO-uz-Acj" kind="relationship" relationship="viewControllers" id="D9Z-OO-ZRf"/>
-                        <segue destination="H4I-wS-7hR" kind="relationship" relationship="viewControllers" id="aIt-sv-DTI"/>
+                        <segue destination="96W-Fu-e6Q" kind="relationship" relationship="viewControllers" id="9mT-0D-x2x"/>
                         <segue destination="Oce-br-jzs" kind="relationship" relationship="viewControllers" id="4Xy-hI-ncC"/>
                         <segue destination="cwC-oK-Chl" kind="relationship" relationship="viewControllers" id="xHf-4j-UHT"/>
                     </connections>
@@ -627,28 +664,10 @@
             </objects>
             <point key="canvasLocation" x="656" y="-646.77661169415296"/>
         </scene>
-        <!--Wednesday-->
-        <scene sceneID="kG4-mO-JzJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H4I-wS-7hR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Wednesday" image="Wednesday" id="rfy-HY-IGA"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RiC-RU-tjR">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="96W-Fu-e6Q" kind="relationship" relationship="rootViewController" id="2ei-RI-tR7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rZw-iA-rdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="656" y="132.23388305847078"/>
-        </scene>
         <!--Thursday-->
         <scene sceneID="Pj6-Zh-U1W">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="spd-rk-pfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oce-br-jzs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Thursday" image="Thursday" id="Vpv-XX-H0q"/>
                     <toolbarItems/>
@@ -661,7 +680,6 @@
                         <segue destination="6Ca-cO-Wvs" kind="relationship" relationship="rootViewController" id="LV8-Ha-fsd"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="spd-rk-pfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="634" y="877"/>
         </scene>
@@ -716,5 +734,6 @@
         <image name="Thursday" width="25" height="25"/>
         <image name="Tuesday" width="25" height="25"/>
         <image name="Wednesday" width="25" height="25"/>
+        <image name="closeButton" width="105" height="105"/>
     </resources>
 </document>
