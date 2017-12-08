@@ -72,10 +72,28 @@ class WednesdayViewController: UIViewController {
     }
     
     @IBAction func closeCamera(_ sender: UIButton) {
-        tabBarController?.selectedIndex = 1
+        tabBarController?.selectedIndex = 0
     }
     
     @IBAction func didTakePhoto(_ sender: UIButton) {
+        
+        if let videoConnection = stillImageOutput!.connection(with: AVMediaType.video) {
+            // ...
+            // Code for photo capture goes here...
+            stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: { (sampleBuffer, error) -> Void in
+                // ...
+                // Process the image data (sampleBuffer) here to get an image file we can put in our captureImageView
+                if sampleBuffer != nil {
+                    let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer!)
+                    let dataProvider = CGDataProvider(data: imageData as! CFData)
+                    let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
+                    let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
+                    // ...
+                    // Add the image to captureImageView here...
+                    self.captureImageView.image = image
+                }
+            })
+        }
     }
     
     
