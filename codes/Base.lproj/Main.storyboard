@@ -523,10 +523,10 @@
             </objects>
             <point key="canvasLocation" x="1374" y="-647"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Thursday-->
         <scene sceneID="j6L-gm-gJD">
             <objects>
-                <tableViewController id="imb-Og-iFo" sceneMemberID="viewController">
+                <tableViewController id="imb-Og-iFo" customClass="ThursdayTableViewController" customModule="codes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="y3E-1X-2O5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -890,7 +890,7 @@
                             <outlet property="delegate" destination="imb-Og-iFo" id="TVm-ba-NXv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="PlC-BY-5bl"/>
+                    <navigationItem key="navigationItem" title="Thursday" id="PlC-BY-5bl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DC4-3O-8dJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
