@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3172522A2B4DD0C69F7B5156 /* Pods_codesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A27DF359368F94FFE703B3 /* Pods_codesUITests.framework */; };
 		4377D7C61FD8C13D00C74E68 /* WednesdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377D7C41FD8B7A900C74E68 /* WednesdayViewController.swift */; };
+		4377D7D21FDB07BE00C74E68 /* ThursdayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377D7D11FDB07BE00C74E68 /* ThursdayTableViewController.swift */; };
 		439A27781FD6060900C88D47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439A27771FD6060900C88D47 /* AppDelegate.swift */; };
 		439A277A1FD6060900C88D47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439A27791FD6060900C88D47 /* ViewController.swift */; };
 		439A277D1FD6060900C88D47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439A277B1FD6060900C88D47 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		31A27DF359368F94FFE703B3 /* Pods_codesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_codesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D3759B1465FC226C3D64F8A /* Pods-codes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codes.release.xcconfig"; path = "Pods/Target Support Files/Pods-codes/Pods-codes.release.xcconfig"; sourceTree = "<group>"; };
 		4377D7C41FD8B7A900C74E68 /* WednesdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayViewController.swift; sourceTree = "<group>"; };
+		4377D7D11FDB07BE00C74E68 /* ThursdayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayTableViewController.swift; sourceTree = "<group>"; };
 		439A27741FD6060900C88D47 /* codes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = codes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439A27771FD6060900C88D47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		439A27791FD6060900C88D47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				439A27A51FD61C8000C88D47 /* MondayViewController.swift */,
 				43CAE5EF1FD70A89007F8D44 /* TextDetailsViewController.swift */,
 				4377D7C41FD8B7A900C74E68 /* WednesdayViewController.swift */,
+				4377D7D11FDB07BE00C74E68 /* ThursdayTableViewController.swift */,
 				439A277E1FD6060900C88D47 /* Assets.xcassets */,
 				439A27801FD6060900C88D47 /* LaunchScreen.storyboard */,
 				439A27831FD6060900C88D47 /* Info.plist */,
@@ -476,6 +479,7 @@
 				439A277A1FD6060900C88D47 /* ViewController.swift in Sources */,
 				439A27781FD6060900C88D47 /* AppDelegate.swift in Sources */,
 				43CAE5F01FD70A89007F8D44 /* TextDetailsViewController.swift in Sources */,
+				4377D7D21FDB07BE00C74E68 /* ThursdayTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
